@@ -9,5 +9,8 @@
         <module name="spring-mvc" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ebobaniy-maven" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>
