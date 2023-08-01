@@ -7,9 +7,9 @@ import java.util.List;
 
 @Transactional
 public interface UserDao {
-    public List<User> index();
+    public List<User> getAllUsers();
 
-    public User show(int id);
+    public User getUserById(int id);
 
     public void save(User user);
 

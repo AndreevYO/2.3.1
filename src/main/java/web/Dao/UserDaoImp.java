@@ -13,13 +13,13 @@ public class UserDaoImp implements UserDao {
     private EntityManager entityManager;
 
     @Override
-    public List<User> index() {
+    public List<User> getAllUsers() {
 
         return entityManager.createQuery("from User", User.class).getResultList();
     }
 
     @Override
-    public User show(int id) {
+    public User getUserById(int id) {
         return entityManager.find(User.class, id);
     }
 

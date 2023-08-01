@@ -18,14 +18,14 @@ public class UsersController {
     }
 
     @GetMapping
-    public String index(Model model) {
-        model.addAttribute("users", userService.index());
+    public String getAllUsers(Model model) {
+        model.addAttribute("users", userService.getAllUsers());
         return "users/index";
     }
 
     @GetMapping("/{id}")
-    public String show(@PathVariable("id") int id, Model model) {
-        model.addAttribute("user", userService.show(id));
+    public String getUserById(@PathVariable("id") int id, Model model) {
+        model.addAttribute("user", userService.getUserById(id));
         return "users/show";
     }
 
@@ -43,7 +43,7 @@ public class UsersController {
 
     @GetMapping("/{id}/edit")
     public String edit(Model model, @PathVariable("id") int id) {
-        model.addAttribute("user", userService.show(id));
+        model.addAttribute("user", userService.getUserById(id));
         return "users/edit";
     }
 
